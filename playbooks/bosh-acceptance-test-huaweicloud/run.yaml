@@ -89,7 +89,7 @@
                   --vars-store=creds.yml \
                   -o bosh-deployment/huaweicloud/cpi.yml \
                   -o bosh-deployment/external-ip-with-registry-not-recommended.yml \
-                  --vars-file=vars.yml  2>&1
+                  --vars-file=vars.yml
 
               bosh alias-env bosh-1 -e "{{ floating_ip }}" --ca-cert <(bosh int ./creds.yml --path /director_ssl/ca)
               export BOSH_CLIENT=admin
